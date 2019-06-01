@@ -3,19 +3,15 @@ import { connect } from 'react-redux';
 
 import { addTodo } from '../actions/actions';
 
-let nextTodoId = 0;
 let AddTodo = ({ dispatch }) => {
   let input;
 
   return (
     <div>
-      <input ref={node => {
-        input = node
-      }} />
-      <br />
+      <input ref={node => { input = node }} placeholder="Enter Task"/>
       <button onClick={() => {
-          dispatch(addTodo(input.value))
-          input.value = '';
+        dispatch(addTodo(input.value))
+        input.value = '';
       }} >
         Add Todo
       </button>

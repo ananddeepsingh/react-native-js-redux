@@ -1,6 +1,6 @@
-export const visibilityFilter = (state = 'SHOW_ALL', action) => {
+export const visibilityFilter = (state = 'renderData', action) => {
   switch (action.type) {
-    case 'SET_VISIBILITY_FILTER':
+    case 'SHOW_DATA':
       return action.filter;
     default:
       return state;

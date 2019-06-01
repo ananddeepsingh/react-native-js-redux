@@ -1,16 +1,22 @@
 let nextTodoId = 0;
 
 export const addTodo = (text) => {
-  return {
-    type: 'ADD_TODO',
-    id: nextTodoId++,
-    text
-  };
+  if (text === '') {
+    alert("Please Enter Task");
+    return {};
+  }else{
+    return {
+      type: 'ADD_TODO',
+      id: nextTodoId++,
+      text
+    };
+  }
+  // return {};
 };
 
 export const setVisibilityFilter = (filter) => {
   return {
-    type: 'SET_VISIBILITY_FILTER',
+    type: 'SHOW_DATA',
     filter
   };
 };

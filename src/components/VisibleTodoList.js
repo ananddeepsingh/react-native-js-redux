@@ -5,16 +5,8 @@ import { toggleTodo } from '../actions/actions';
 
 const getVisibleTodos = (todos, filter) => {
   switch (filter) { 
-    case 'SHOW_ALL':
+    case 'renderData':
       return todos;
-    case 'SHOW_COMPLETED':
-      return todos.filter(
-        t => t.completed
-      );
-    case 'SHOW_ACTIVE':
-      return todos.filter(
-        t => !t.completed
-      );
   }
 };
 

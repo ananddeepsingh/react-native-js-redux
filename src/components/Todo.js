@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'; 
 
 export const Todo = ({onClick, completed, text}) => {
   return (
